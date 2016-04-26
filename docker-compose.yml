@@ -1,0 +1,13 @@
+uwsgi-django:
+  image: meinheld 
+  #command: supervisord -n
+  #command: python /home/docker/code/app/manage.py runserver 8001
+  #command: /usr/local/bin/uwsgi --ini /home/docker/code/uwsgi.ini
+  container_name: meinheld
+  net: "host"
+  environment:
+    APP_NAME: accessToken 
+  #ports:
+   #- "8001:8001"
+  volumes:
+   - /data/code/accessToken:/home/docker/code/app
