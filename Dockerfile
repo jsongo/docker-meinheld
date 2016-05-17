@@ -14,6 +14,7 @@ RUN apt-get install -y libmysqld-dev
 RUN pip install -U meinheld gunicorn
 
 ADD requirements.txt /home/docker/code/
+RUN apt-get install -y libpq-dev
 RUN pip install -r /home/docker/code/requirements.txt
 
 ADD . /home/docker/code/

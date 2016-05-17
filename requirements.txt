@@ -1,5 +1,6 @@
 django
 beautifulsoup4
 redis
-MySQL-python
+#MySQL-python
+psycopg2
 requests
